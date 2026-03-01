@@ -1,0 +1,52 @@
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("John");
+        p.setAge(25);
+
+        Employee e = new Employee();
+        e.setSalary(50000);
+
+        System.out.println("Name: " + p.getName());
+        System.out.println("Age: " + p.getAge());
+        System.out.println("Salary: " + e.getSalary());
+    }
+}
+
+public class Employee {
+    private double salary;
+
+    public void setSalary(double salary) {
+        if(salary > 0) {
+            this.salary = salary;
+        }
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class Person {
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        if(age > 0) {
+            this.age = age;
+        }
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
